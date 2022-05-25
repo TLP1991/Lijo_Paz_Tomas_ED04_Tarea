@@ -2,7 +2,7 @@ package circulo;
 
 /**
  * Pruebas de refactorización en NetBeans con la clase Circulito
- *
+ *a
  * @author profesor
  */
 public class Circulito {
