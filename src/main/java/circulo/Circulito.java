@@ -2,11 +2,11 @@ package circulo;
 
 /**
  * Pruebas de refactorización en NetBeans con la clase Circulito
- *a
- * @author profesor
+ *
+ * @author Tomás Lijó Paz
  */
 public class Circulito {
-
+       
     private int coordenadaX;
     private int coordenadaY;
     private double radio;
@@ -55,32 +55,57 @@ public class Circulito {
 
     public Circulito() {
     }
-
+/**
+ * 
+ * @param valorX
+ * @param valorY
+ * @param valorRadio 
+ */
     public Circulito(int valorX, int valorY, double valorRadio) {
         coordenadaX = valorX;
         coordenadaY = valorY;
         setRadio(valorRadio);
     }
-
+    /**
+    * @Constante añadida para el apartado 
+    * "Introducir constante LIMITERADIO de tipo double con valor 0.0"
+    * Ahora mismo no está siendo utilizada
+    */
     private static final double LIMITERADIO = 0.0;
-
+/**
+ * 
+ * @return diametro del círculo
+ */
     public double obtenerDiametro() {
         return getRadio() * 2;
     }
-
+/** 
+ * 
+ * @return circunferencia del círculo
+ */
     public double obtenerCircunferencia() {
         return Math.PI * obtenerDiametro();
     }
-
+/**
+ * 
+ * @return el área del círculo
+ */
     public double obtenerAreaCirculo() {
         return Math.PI * getRadio() * getRadio();
     }
-
+/**
+ * 
+ * @return el centro del círculo
+ */
     @Override
     public String toString() {
         return "Centro = [" + getCoordenadaX() + "," + getCoordenadaY() + "]; Radio = " + getRadio();
     }
-
+    /**
+     * 
+     * @param trasladarX
+     * @param trasladarY 
+     */
     public void trasladarCentro(int trasladarX, int trasladarY) {
         setCoordenadaX(getCoordenadaX() + trasladarX);
         setCoordenadaY(getCoordenadaY() + trasladarY);
